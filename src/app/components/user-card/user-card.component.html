@@ -1,0 +1,5 @@
+<div class="card" [appHighlight]="isActive">
+  <h3>{{ user.name }}</h3>
+  <p>{{ user.email }}</p>
+  <button (click)="viewDetails.emit()">View Details</button>
+</div>

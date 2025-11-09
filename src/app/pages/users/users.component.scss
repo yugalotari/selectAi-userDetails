@@ -1,0 +1,79 @@
+.users-wrapper {
+  padding: 20px;
+  background: #f4f4f5;
+  font-family: 'Inter', sans-serif;
+
+  h2 {
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  .controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+
+    input,
+    select {
+      padding: 8px 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+  }
+
+  .user-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow-y: auto;
+    height: 70vh;
+    scrollbar-width: thin;
+
+    .user-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      border-radius: 8px;
+      padding: 12px 18px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      transition: all 0.2s;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      h3 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      p {
+        margin: 2px 0;
+        color: #666;
+        font-size: 14px;
+      }
+
+      button {
+        background: #f7f7f7;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding: 6px 10px;
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:hover {
+          background: #e0e0e0;
+        }
+      }
+    }
+  }
+}
+
+::ng-deep .custom-dialog-container .mat-mdc-dialog-container {
+  padding: 0;
+  border-radius: 12px;
+}
