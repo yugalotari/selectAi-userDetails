@@ -2,12 +2,7 @@
   <h2>Users</h2>
 
   <div class="controls">
-    <input
-      type="text"
-      placeholder="Search by name..."
-      [(ngModel)]="searchTerm"
-      (input)="searchUsers()"
-    />
+    <input type="text" placeholder="Search by name..." [(ngModel)]="searchTerm" (input)="searchUsers()" />
 
     <select [(ngModel)]="sortBy" (change)="sortUsers()">
       <option value="name">Sort by Name</option>
@@ -19,13 +14,25 @@
   <div *ngIf="loading" class="loading">Loading users...</div>
   <div *ngIf="error" class="error">{{ error }}</div>
 
-  <div class="user-list" *ngIf="!loading && !error">
-    <div class="user-card" *ngFor="let user of filteredUsers">
-      <div class="info">
-        <h3>{{ user.name }}</h3>
-        <p>{{ user.email }}</p>
+  <div *ngIf="!loading && !error">
+    <div *ngIf="filteredUsers && filteredUsers.length > 0; else noData">
+      <div class="user-list">
+        <div class="user-card" *ngFor="let user of filteredUsers">
+          <div class="info">
+            <h3>{{ user.name }}</h3>
+            <p>{{ user.email }}</p>
+          </div>
+          <button (click)="openDetails(user)">View Details</button>
+        </div>
       </div>
-      <button (click)="openDetails(user)">View Details</button>
     </div>
+
+    <ng-template #noData>
+      <div class="no-data">
+        <span class="material-icons icon">search</span>
+        <h3>No Users Found</h3>
+        <p>Try changing your search or check back later.</p>
+      </div>
+    </ng-template>
   </div>
 </div>

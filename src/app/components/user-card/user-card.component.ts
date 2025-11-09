@@ -11,6 +11,6 @@ import { HighlightDirective } from '../../directives/highlight.directive';
 })
 export class UserCardComponent {
   @Input() user: any;
-  @Input() isActive = false;  // ✅ <-- Add this line
+  @Input() isActive = false;
   @Output() viewDetails = new EventEmitter<void>();
 }

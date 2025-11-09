@@ -77,3 +77,23 @@
   padding: 0;
   border-radius: 12px;
 }
+
+
+.no-data {
+  text-align: center;
+  margin-top: 50px;
+  color: #888;
+
+  .icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    margin: 0 0 5px 0;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}

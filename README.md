@@ -41,5 +41,5 @@ It demonstrates core Angular concepts such as routing, API integration, directiv
 ## Setup Instructions
 1. Clone this repository:
    ```bash
-   git clone https://github.com/<your-username>/selectai-app.git
+   git clone https://github.com/yugalotari/selectAi-userDetails.git
    cd selectai-app
